@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <button type="button" id="btn1">Click me </button>
+    <p id="demo"></p>
+    <!-- <p id="demo1"></p> -->
+
+    <script>
+        let input1=document.getElementById("input1");
+        let button=document.getElementById("btn1");
+
+        button.onclick=handler;
+
+        function handler(){
+            let inputbox=(input1.value);
+            console.log(inputbox);
+            let digitArray=Array.from(inputbox);
+            console.log(digitArray);
+            console.log(digitArray.join(' '));
+            let number= digitArray.sort();
+            console.log(number);
+            // document.getElementById("demo").innerHTML = number;
+            let smallestNumber=number[0];
+            console.log(smallestNumber);
+            let largestNumber=number[number.length-1];
+            console.log(largestNumber);
+            document.getElementById("demo").innerHTML = "Smallest Number in a given digit is " + smallestNumber + " And Largest Number in a given digit is " + largestNumber;
+            // document.getElementById("demo").innerHTML = "Largest Number in a given digit is " +largestNumber;
+
+        }
+    </script>
+</body>
+</html>
